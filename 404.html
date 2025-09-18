@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada - Clínica Elevar</title>
+    <meta name="description" content="A página que você está procurando não foi encontrada. Retorne à página inicial da Clínica Elevar.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Estilos -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #bf7665, #cf9386);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: #25D366;
+            border-color: #25D366;
+        }
+        
+        .btn-primary:hover {
+            background: #22c55e;
+            border-color: #22c55e;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-message {
+                font-size: 1rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="error-container">
+        <img src="midia/img/logo/teste.png" alt="Clínica Elevar" class="logo">
+        
+        <div class="error-code">404</div>
+        
+        <h1 class="error-title">Página não encontrada</h1>
+        
+        <p class="error-message">
+            Ops! A página que você está procurando não existe ou foi movida.<br>
+            Que tal voltar para nossa página inicial e conhecer nossos tratamentos?
+        </p>
+        
+        <div class="error-actions">
+            <a href="/" class="btn">🏠 Página Inicial</a>
+            <a href="/pages/produtos.html" class="btn">🛍️ Nossos Produtos</a>
+            <a href="/pages/sobreElevar.html" class="btn">👥 Sobre a Elevar</a>
+            <a href="https://wa.me/5514998356335" class="btn btn-primary" target="_blank">💬 Fale Conosco</a>
+        </div>
+    </div>
+    
+    <script>
+        // Redirecionar automaticamente após 10 segundos
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 10000);
+        
+        // Contador regressivo
+        let countdown = 10;
+        const countdownElement = document.createElement('p');
+        countdownElement.style.marginTop = '2rem';
+        countdownElement.style.opacity = '0.7';
+        countdownElement.innerHTML = `Redirecionando automaticamente em <span id="countdown">${countdown}</span> segundos...`;
+        document.querySelector('.error-container').appendChild(countdownElement);
+        
+        const countdownInterval = setInterval(function() {
+            countdown--;
+            document.getElementById('countdown').textContent = countdown;
+            if (countdown <= 0) {
+                clearInterval(countdownInterval);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

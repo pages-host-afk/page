@@ -1,0 +1,82 @@
+{
+  "name": "Clínica Elevar - Estética e Bem-estar",
+  "short_name": "Elevar",
+  "description": "Clínica de estética especializada em tratamentos faciais e corporais personalizados",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#bf7665",
+  "theme_color": "#bf7665",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["beauty", "health", "medical"],
+  "icons": [
+    {
+      "src": "midia/img/logo/teste.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "midia/img/logo/teste.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "midia/img/home/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Agendar Consulta",
+      "short_name": "Agendar",
+      "description": "Agende sua consulta na Clínica Elevar",
+      "url": "/#contato",
+      "icons": [
+        {
+          "src": "midia/img/logo/teste.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Nossos Produtos",
+      "short_name": "Produtos",
+      "description": "Conheça nossa linha de produtos",
+      "url": "/pages/produtos.html",
+      "icons": [
+        {
+          "src": "midia/img/logo/teste.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Sobre a Elevar",
+      "short_name": "Sobre",
+      "description": "Conheça nossa história e equipe",
+      "url": "/pages/sobreElevar.html",
+      "icons": [
+        {
+          "src": "midia/img/logo/teste.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}

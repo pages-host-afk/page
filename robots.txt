@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://clinicaelevar.com.br/sitemap.xml
+
+# Diretórios permitidos
+Allow: /assets/
+Allow: /midia/
+Allow: /pages/
+
+# Arquivos importantes
+Allow: /index.html
+Allow: /pages/produtos.html
+Allow: /pages/sobreElevar.html
+
+# Bloquear arquivos desnecessários para SEO
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /*.css$
+Disallow: /*.js$
+
+# Bloquear arquivos de sistema
+Disallow: /desktop.ini
+Disallow: /.DS_Store
+Disallow: /Thumbs.db
+
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1
