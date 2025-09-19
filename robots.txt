@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://clinicaelevar.com.br/sitemap.xml
+# Sitemap atualizado
+Sitemap: https://elevarourinhos.com.br/sitemap.xml
 
 # Diretórios permitidos
 Allow: /assets/
@@ -27,3 +27,5 @@ Disallow: /Thumbs.db
 
 # Crawl-delay para evitar sobrecarga
 Crawl-delay: 1
+
+
