@@ -1,0 +1,501 @@
+.sobre-section {
+    display: flex;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bf7665;
+    overflow: visible;
+    z-index: 0;
+}
+
+.sobre-content {
+    display: flex;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 2rem;
+    gap: 10rem;
+}
+
+.sobre-text-container {
+    justify-content: center;
+}
+
+.sobre-title {
+    font-family: var(--fonte-titulo);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+
+}
+
+.subtitle-wrapper-sobre {
+    font-family: var(--fonte-principal);
+    color: white;
+    font-size: 1rem;
+    width: 23rem;
+}
+
+
+
+.team-photo {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    
+  }
+
+
+
+
+
+
+
+  .depoimentos-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== CABEÇALHO (TÍTULO + SUBTÍTULO) ========== */
+.depoimentos-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.depoimentos-title {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+} 
+
+
+.headline-title {
+  color: white;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+
+.depoimentos-subtitle {
+  font-size: 1.5rem;
+  color: white;
+  opacity: 1;
+  overflow:hidden;
+}
+
+/* ========== GRID DE CARDS ========== */
+.depoimentos-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* -------------- CADA CARD (GLASSMORPHISM 3D) -------------- */
+.depo-card {
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-inner {
+  background: #ffffff;
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+  transform: rotateY(15deg) translateY(0);
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+/* Conteúdo interno do card */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cliente-foto {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--neutral-light);
+}
+
+.cliente-nome {
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 1rem;
+}
+
+/* Texto do depoimento */
+.card-body {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.cliente-texto {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--primary-dark);
+}
+
+/* Rodapé do card (data + like) */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--primary-dark);
+}
+
+.arroba-ig {
+  text-align: center;
+  width: 140px;
+  color: #000000;
+  background-color: var(--cor-logo);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.heart-icon {
+  font-size: 1rem;
+  color: red
+}
+
+/* Hover / foco / tilt do card */
+.depo-card:hover .card-inner,
+.depo-card:focus-within .card-inner {
+  transform: rotateY(0deg) translateY(-10px) scale(1.05);
+}
+
+/* Quando clicar no card (active), “afunda” levemente */
+.depo-card:active .card-inner {
+  transform: rotateY(0deg) translateY(-5px) scale(0.98);
+}
+
+  .depoimentos-cards {
+    gap: 1.5rem;
+  }
+
+.container-depoimentos {
+  position: relative;
+  padding: 4rem 2rem;
+  background-image: url(/assets/img/depoimento-bg.png);
+  background-size: cover;       /* Faz com que a imagem cubra todo o container */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-position: center;  /* Centraliza a imagem no container */
+}
+
+.depoimentos-holografico {
+  padding: 1rem 0.5rem 0 0;
+ 
+}
+
+.holografico-container {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+}
+
+.holografico-card {
+  width: 500px; 
+  height: 150px; 
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotateY(15deg);
+}
+
+.holografico-card:hover {
+  transform: rotateY(0deg) translateY(-20px) scale(1.1);
+  filter: drop-shadow(0 10px 20px rgba(241,91,108,1));
+}
+
+.card-content {
+  background: rgba(255,255,255, 1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/*grid-template-columns: 1fr 1.5fr;*/ 
+.content-depoiment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h3 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.comment-box {
+      background-color: white;
+      border-radius: 18px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: flex-start;
+      max-width: 400px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      font-size: 14px;
+    }
+
+
+
+
+
+
+     .comment-box img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .comment-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comment-name {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .comment-text {
+      margin-bottom: 6px;
+    }
+
+    .comment-meta {
+      font-size: 12px;
+      color: #65676b;
+      display: flex;
+      gap: 12px;
+    }
+
+    .comment-meta span {
+      cursor: pointer;
+    }
+
+    .like-icon {
+      color: #1877f2;
+    }
+
+
+
+.feature-box {
+  background: #2A4365;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+}
+
+.feature-content {
+  color: white;
+  max-width: 400px;
+}
+
+.feature-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #FF6B6B;
+  padding-left: 1rem;
+}
+
+.benefits-list {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+.benefits-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.feature-button {
+  background: #FF6B6B;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  font-weight: 600;
+}
+
+.feature-button:hover {
+  transform: translateY(-3px);
+  background: #FF5252;
+}
+
+.icon {
+  display: inline-block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ====== Transformações (novo) ====== */
+.transformacoes-section { padding: 48px 8vw; }
+.transformacoes-header { text-align:center; margin-bottom: 28px; }
+.transformacoes-title { font-size: clamp(1.6rem, 2.4vw, 2.2rem); font-weight: 800; color: #fff; }
+.transformacoes-subtitle { color: #f7d27a; opacity: .95; margin-top: 8px; }
+
+.transformacoes-cards{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+
+.transform-card{ display:flex; flex-direction:column; align-items:center; }
+
+.transform-frame{
+  --swap-duration: 950ms;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0,0,0,.06);
+  box-shadow: 0 16px 40px rgba(0,0,0,.30);
+  cursor: pointer;
+  outline: none;
+  isolation: isolate;
+}
+.transform-frame img{
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  user-select: none; -webkit-user-drag: none;
+}
+/* Antes visível por inteiro */
+.before-image-wrapper{
+  position:absolute; inset:0;
+  z-index:1;
+  transition: transform var(--swap-duration) cubic-bezier(.25,.8,.25,1), opacity var(--swap-duration);
+}
+/* Depois espiando por baixo (borda inferior visível) */
+.after-image-wrapper{
+  position:absolute; inset:0;
+  transform: translateY(28%);
+  z-index:0;
+  filter: saturate(1) contrast(1.05);
+  transition: transform var(--swap-duration) cubic-bezier(.25,.8,.25,1);
+}
+/* Indicador claro para clique */
+.click-indicator{
+  position:absolute;
+  left:50%;
+  bottom:14px;
+  transform:translateX(-50%);
+  display:grid; 
+  place-items:center; 
+  gap:6px; 
+  z-index:2; 
+  pointer-events:none;
+}
+.click-badge{
+  background: rgba(255, 0, 0, 0);
+  color: #fff; font-weight:700; font-size:.95rem;
+  padding:.55rem .9rem; border-radius:999px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.7);
+}
+.click-icon{ color:#fff; opacity:.95; font-size:.9rem; animation:nudgeUp 1.3s ease-in-out infinite; }
+
+@keyframes nudgeUp{
+  0%,100%{ transform: translateY(0); opacity:.85; }
+  50%{ transform: translateY(-6px); opacity:1; }
+}
+
+/* Estado ativo: Depois sobe; Antes vai à esquerda e desce para o fundo */
+.transform-frame.active .after-image-wrapper{
+  transform: translateY(0);
+  z-index:2;
+}
+.transform-frame.active .before-image-wrapper{
+  transform: translate(-18%, 22%) scale(.86);
+  opacity: .95;
+  z-index:1;
+}
+.transform-frame.active .click-indicator{ display:none; }
+
+/* Legenda */
+.transform-caption{ 
+  background: none;
+  text-align: center;
+  margin-top: 14px;
+
+ }
+.transform-caption h3{ 
+  color: #fff; font-size: 1.5rem;
+  font-weight:700; margin-top:0.1rem; }
+  
+/* Acessibilidade / foco */
+.transform-frame:focus-visible{
+  box-shadow: 0 0 0 3px rgba(255,255,255,.6), 0 0 0 6px rgba(0,0,0,.35);
+  outline: none;
+}
+
+
+
+/* Nada decorativo bloqueia clique */
+#particles-canvas,
+.bg-overlay {
+  pointer-events: none !important;
+}
+
+/* Seção transformações acima de fundos/overlays */
+.transformacoes-section {
+  position: relative;
+  z-index: 3;
+}
+
+/* Botões do carrossel sempre clicáveis */
+.carousel-wrapper { position: relative; }
+.carousel-btn {
+  z-index: 50;
+  pointer-events: auto;
+}
+
+/* Overlay dos cards não rouba clique (só os links dentro dele) */
+.card-overlay { pointer-events: none; }
+.card-overlay a,
+.card-overlay button,
+.card-overlay .btn { pointer-events: auto; }
+

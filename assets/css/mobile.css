@@ -1,0 +1,970 @@
+/* assets/css/mobile.css */
+
+/* ========= Regras globais ========= */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Nada decorativo bloqueia o clique */
+#particles-canvas,
+.bg-overlay {
+  pointer-events: none !important;
+}
+
+/* Transformações acima de fundos/overlays */
+.transformacoes-section {
+  position: relative;
+  z-index: 3;
+}
+
+/* Botões do carrossel sempre clicáveis */
+.carousel-wrapper { position: relative; }
+.carousel-btn { z-index: 50; pointer-events: auto; }
+
+/* Estilos para os botões de navegação do carrossel */
+#prevSlide, #nextSlide {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Overlay dos cards não intercepta clique */
+.card-overlay { pointer-events: none; }
+.card-overlay a, .card-overlay button, .card-overlay .btn { pointer-events: auto; }
+
+/* Ocultar controles nativos de vídeo */
+video::-webkit-media-controls { display:none !important; }
+
+/* ========= Breakpoints ÚNICOS neste arquivo ========= */
+
+/* ≤ 480px — mobile estreito */
+@media (max-width: 375px) {
+  /* Menu - CORREÇÃO CRÍTICA */
+  #mainMenu { 
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .menu-container { 
+    padding: 8px 12px !important;
+    height: 100px !important;
+    flex-direction: wrap !important;
+    gap: 0px;
+  }
+
+  .logo-link {
+    width: 100px !important;
+  }
+  .logo-link img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .left-itens {
+    flex-direction: row !important;
+    gap: 0px;
+  }
+  
+  .menu-content ul { 
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    width: 100%;
+  }
+  
+  .menu-content a { 
+    font-size: 0.8rem !important;
+    padding: 0px 3px !important;
+    margin: 0 !important;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    
+  }
+
+  /* Home section - CORREÇÃO CRÍTICA */
+  .home-section {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 80px 20px 20px 20px !important;
+  }
+  
+  .home-content {
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+    gap: 2rem;
+  }
+
+  .home-container {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .home-title {
+    font-size: 2rem !important;
+    width: 80vw !important;
+    margin: 0 0 1rem 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  .subtitle-wrapper-home {
+    width: 100%;
+  }
+
+  .home-subtitle {
+    font-size: 1.2rem !important;
+    margin: 0 0 1rem 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .home-subtitle-typing {
+    font-size: 1rem !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  .img-container-home {
+    margin-top: -5rem !important;
+    position: relative !important;
+    left: 30px !important;
+    width: 100% !important;
+    order: 2;
+  }
+
+  .img-home {
+    position: relative;
+    top: 40px;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  /* Carrossel - CORREÇÃO CRÍTICA */
+  .carousel-wrapper { 
+   padding: 0 20px !important;
+  margin-top: 2rem !important;
+  }
+  
+  .carousel-track { 
+    display: flex;                    /* garante slides lado a lado */
+  transition: transform .5s ease;   /* animação suave */
+  will-change: transform;
+  }
+  
+  .carousel-slide { 
+  min-width: 100% !important;       /* cada slide ocupa a largura inteira */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;   /* centraliza o conteúdo do slide */
+  padding: 20px 0 !important;
+    
+  }
+  
+  .banner-card  {
+  width: 100% !important;
+  max-width: 520px;                 /* opcional: limita a largura no mobile */
+  height: 300px !important;
+  margin: 0 auto 20px auto !important;
+  overflow: hidden !important;
+  
+}
+
+
+
+  .banner-card::after{
+    content: attr(data-desc);
+    font-size: 0.7rem !important;
+    
+  }
+  .banner-card img {
+    object-fit: cover !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  /* Queixa section */
+  .queixa-section {
+    margin-top: 1rem !important;
+    margin-bottom: -3rem !important;
+    padding: 0px 10px;
+  }
+
+  .queixa-title {
+    font-size: 2rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .queixa-menu {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    
+  }
+
+  .queixa-menu ul {
+    margin-left: -17.5rem !important;
+    justify-content: center !important;
+    
+  }
+
+  .queixa-menu ul li a {
+    font-size: 1rem !important;
+    flex-direction: column;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 1rem 20px !important;
+    margin-top: 3rem !important;
+  }
+  
+  .cta-content {
+    padding: 1rem !important;
+    font-size: 0.1em;
+  }
+  
+  .cta-title {
+    font-size: 2rem !important;
+  }
+  
+  .cta-subtitle {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+  }
+  
+  .cta-main-container {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .cta-info-column,
+  .cta-map-column {
+    width: 100% !important;
+  }
+  
+  .benefits-title,
+  .contact-title,
+  .location-title {
+    font-size: 1rem !important;
+  }
+  
+  .cta-benefits-container,
+  .cta-buttons-container,
+  .location-container {
+    padding: 1rem !important;
+  }
+
+  .cta-benefits {
+    font-size: 0.7rem !important;
+  }
+  .cta-buttons {
+    align-items: center !important;
+    gap: 1rem;
+  }
+
+  .location-info {
+    font-size: 0.5rem !important;
+  }
+  
+  .btn-social {
+    min-width: 100% !important;
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Depoimentos */
+  .depoimentos-cards { 
+    grid-template-columns: 1fr !important; 
+    gap: 1.25rem !important;
+    padding: 0 20px;
+  }
+
+  /* Transformações */
+  .transformacoes-section {
+    padding: 2rem 20px !important;
+  }
+  
+  .transformacoes-cards { 
+    grid-template-columns: 1fr !important; 
+    gap: 1.25rem !important; 
+  }
+  
+  .transform-frame { 
+    border-radius: 14px; 
+  }
+
+  /* Produtos */
+  .produtos-container-principal { 
+    padding: 1rem 20px !important; 
+  }
+
+  .produtos-title-description {
+    width: 100% !important;
+    margin-left:  0rem !important;
+  } 
+  
+  .produtos-container { 
+    flex-direction: column !important; 
+    gap: 1rem !important; 
+  }
+  
+  .goodVit-container, .elevar-produtos { 
+    width: 100% !important; 
+    height: auto !important; 
+  }
+  
+  .img-part, .elevar-part { 
+    display: grid !important; 
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 12px !important; 
+  }
+  .img-part img,.elevar-part img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Sobre section */
+  .sobre-section {
+    padding: 1rem 20px !important;
+  }
+  
+  .sobre-content {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    padding: 0 !important;
+  }
+
+  .sobre-text-container {
+    width: 100% !important;
+  }
+
+  .sobre-title {
+    font-size: 2.5rem !important;
+    margin-left: -1.75rem !important;
+  }
+
+
+  .subtitle-wrapper-sobre {
+    width: 90% !important;
+    font-size: 0.8rem !important;
+  }
+
+  .team-photo {
+    height: 300px !important;
+    width: 110vw !important;
+    object-fit: fill !important;
+    margin-left: -40px !important;
+    border-radius: 15px !important;
+  }
+
+  .depoimentos-subtitle {
+    font-size: 1rem !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+
+  .depo-card{
+    perspective: 4000px !important;
+  }
+  .depo-card-inner{
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  
+  
+  /* Widget produtos */
+  .produtos-widget {
+    margin: 1rem 0 !important;
+  }
+
+  .widget-box {
+    text-align: center;
+    font-size: 0.8rem;
+    height: auto !important;
+  }
+}
+
+@media (min-width: 375px) and (max-width:768px) {
+  #mainMenu { 
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .menu-container { 
+    padding: 8px 12px !important;
+    height: 100px !important;
+    flex-direction: wrap !important;
+    gap: 0px;
+  }
+
+  .logo-link {
+    width: 100px !important;
+  }
+  .logo-link img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .left-itens {
+    flex-direction: row !important;
+    gap: 0px;
+  }
+  
+  .menu-content ul { 
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    width: 100%;
+  }
+  
+  .menu-content a { 
+    font-size: 0.8rem !important;
+    padding: 0px 3px !important;
+    margin: 0 !important;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    
+  }
+
+  /* Home section - CORREÇÃO CRÍTICA */
+  .home-section {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 80px 20px 20px 20px !important;
+  }
+  
+  .home-content {
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+    gap: 2rem;
+  }
+
+  .home-container {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .home-title {
+    font-size: 2.25rem !important;
+    width: 80vw !important;
+    margin: 0 0 1rem 0 !important;
+    line-height: 1.2 !important;
+    
+  }
+
+  .subtitle-wrapper-home {
+    width: 100%;
+  }
+
+  .home-subtitle {
+    font-size: 1.5rem !important;
+    margin: 0 0 1rem 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  .home-subtitle-typing {
+    font-size: 1.1rem !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  .img-container-home {
+    margin-top: -5rem !important;
+    position: relative !important;
+    left: 40px !important;
+    width: 100% !important;
+    order: 2;
+  }
+
+  .img-home {
+    position: relative;
+    top: 40px;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  /* Carrossel - CORREÇÃO CRÍTICA */
+  .carousel-wrapper { 
+   padding: 0 20px !important;
+  margin-top: 2rem !important;
+  }
+  
+  .carousel-track { 
+    display: flex;                    /* garante slides lado a lado */
+  transition: transform .5s ease;   /* animação suave */
+  will-change: transform;
+  }
+  
+  .carousel-slide { 
+  min-width: 100% !important;       /* cada slide ocupa a largura inteira */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;   /* centraliza o conteúdo do slide */
+  padding: 20px 0 !important;
+    
+  }
+  
+  .banner-card  {
+  width: 100% !important;
+  max-width: 520px;                 /* opcional: limita a largura no mobile */
+  height: 300px !important;
+  margin: 0 auto 20px auto !important;
+  overflow: hidden !important;
+  
+}
+
+
+
+  .banner-card::after{
+    content: attr(data-desc);
+    font-size: 0.8rem !important;
+    
+  }
+  .banner-card img {
+    object-fit: cover !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  /* Queixa section */
+  .queixa-section {
+    margin-top: 1rem !important;
+    margin-bottom: -3rem !important;
+    padding: 0px 10px;
+  }
+
+  .queixa-title {
+    font-size: 2.25rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .queixa-menu {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    
+  }
+
+  .queixa-menu ul {
+    margin-left: -20.5rem !important;
+    justify-content: center !important;
+    
+  }
+
+  .queixa-menu ul li a {
+    font-size: 1rem !important;
+    flex-direction: column;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 1rem 20px !important;
+    margin-top: 3rem !important;
+  }
+  
+  .cta-content {
+    padding: 1rem !important;
+    font-size: 0.1em;
+  }
+  
+  .cta-title {
+    font-size: 2.25rem !important;
+  }
+  
+  .cta-subtitle {
+    font-size: 1.2rem !important;
+    max-width: 100% !important;
+  }
+  
+  .cta-main-container {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .cta-info-column,
+  .cta-map-column {
+    width: 100% !important;
+  }
+  
+  .benefits-title,
+  .contact-title,
+  .location-title {
+    font-size: 1.25rem !important;
+  }
+  
+  .cta-benefits-container,
+  .cta-buttons-container,
+  .location-container {
+    padding: 1rem !important;
+  }
+
+  .cta-benefits {
+    font-size: 0.9rem !important;
+  }
+  .cta-buttons {
+    align-items: center !important;
+    gap: 1rem;
+  }
+
+  .location-info {
+    font-size: 0.7rem !important;
+  }
+  
+  .btn-social {
+    min-width: 100% !important;
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Depoimentos */
+  .depoimentos-cards { 
+    grid-template-columns: 1fr !important; 
+    gap: 1.25rem !important;
+    padding: 0 20px;
+  }
+
+  /* Transformações */
+  .transformacoes-section {
+    padding: 2rem 20px !important;
+  }
+  
+  .transformacoes-cards { 
+    grid-template-columns: 1fr !important; 
+    gap: 1.25rem !important; 
+  }
+  
+  .transform-frame { 
+    border-radius: 14px; 
+  }
+
+  /* Produtos */
+  .produtos-container-principal { 
+    padding: 1rem 20px !important; 
+  }
+
+  .produtos-title-description {
+    width: 100% !important;
+    margin-left:  0rem !important;
+  } 
+  
+  .produtos-container { 
+    flex-direction: column !important; 
+    gap: 1rem !important; 
+  }
+  
+  .goodVit-container, .elevar-produtos { 
+    width: 100% !important; 
+    height: auto !important; 
+  }
+  
+  .img-part, .elevar-part { 
+    display: grid !important; 
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 12px !important; 
+  }
+  .img-part img,.elevar-part img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Sobre section */
+  .sobre-section {
+    padding: 1rem 20px !important;
+  }
+  
+  .sobre-content {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    padding: 0 !important;
+  }
+
+  .sobre-text-container {
+    width: 95% !important;
+    justify-content: center !important;
+    margin-left: 10px !important;
+  }
+
+  .sobre-title {
+    font-size: 2.5rem !important;
+    margin-left: -1.75rem !important;
+  }
+
+
+  .subtitle-wrapper-sobre {
+    width: 90% !important;
+    font-size: 0.8rem !important;
+  }
+
+  .team-photo {
+    height: 300px !important;
+    width: 110vw !important;
+    object-fit: fill !important;
+    margin-left: -40px !important;
+    border-radius: 15px !important;
+  }
+
+  .depoimentos-subtitle {
+    font-size: 1rem !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+
+  .depo-card{
+    perspective: 4000px !important;
+  }
+  .depo-card-inner{
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  
+  
+  /* Widget produtos */
+  .produtos-widget {
+    margin: 1rem 0 !important;
+  }
+
+  .widget-box {
+    text-align: center;
+    font-size: 0.8rem;
+    height: auto !important;
+  }
+}
+/* 481–768px — mobile largo / tablet retrato */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Menu */
+  .menu-container {
+    padding: 10px 15px !important;
+  }
+
+  .menu-content ul {
+    gap: 10px;
+  }
+
+  .menu-content a {
+    font-size: 0.85rem !important;
+    padding: 8px 12px !important;
+  }
+
+  /* Home section */
+  .home-content {
+    padding: 0 30px !important;
+    margin-top: -8rem !important;
+  }
+
+  .home-title {
+    font-size: 3.5rem !important;
+    width: 100% !important;
+  }
+
+  .home-subtitle {
+    font-size: 2rem !important;
+    margin-right: 0 !important;
+  }
+
+  .img-container-home {
+    left: 40rem !important;
+  }
+
+  .img-home {
+    max-width: 400px !important;
+  }
+
+  /* Carrossel: 2 cards por vez */
+  .carousel-slide { 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+  }
+  
+  .banner-card { 
+    width: calc(50% - 20px); 
+    height: 350px; 
+  }
+
+  /* Queixa section */
+  .queixa-section {
+    padding: 0 30px;
+  }
+
+  .queixa-menu ul {
+    flex-direction: row !important;
+  }
+
+  /* CTA Section */
+  .cta-content {
+    padding: 2rem 30px !important;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .cta-subtitle {
+    font-size: 1.25rem !important;
+  }
+  
+  .cta-main-container {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  
+  .btn-social {
+    min-width: 250px !important;
+  }
+
+  /* Depoimentos */
+  .depoimentos-cards { 
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 1.5rem !important;
+    padding: 0 30px;
+  }
+  
+  /* Transformações */
+  .transformacoes-section {
+    padding: 3rem 30px !important;
+  }
+  
+  .transformacoes-cards { 
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 1.5rem !important; 
+  }
+
+  /* Produtos */
+  .produtos-container-principal { 
+    padding: 2rem 30px !important; 
+  }
+  
+  .img-part, .elevar-part { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+  }
+
+  /* Sobre section */
+  .sobre-section {
+    padding: 3rem 30px !important;
+  }
+  
+  .sobre-content {
+    gap: 3rem !important;
+  }
+}
+
+/* 769–1024px — tablet paisagem */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .home-section{
+    margin-top: 10rem;
+  }
+  .home-container {
+    width: 80%;
+  }
+
+  .img-container-home {
+    display: none
+
+  }
+
+  .img-container-home img {
+    display:none;
+  }
+
+  .queixa-menu ul {
+    margin-right: 22rem;
+  }
+
+  .banner-card { 
+    width: 320px; 
+    height: 420px; 
+
+  }
+  
+  .depoimentos-cards { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .transformacoes-cards { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  /* CTA Section */
+  .cta-main-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .cta-info-column,
+  .cta-map-column {
+    flex: none;
+    width: 100%;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-social {
+    min-width: 250px;
+  }
+
+  /* Home section */
+  .home-content {
+    padding: 0 5vw;
+    
+  }
+
+  .one-container {
+    max-width: 50%;
+  }
+}
+
+/* Mobile: toque para abrir/fechar */
+@media (hover: none){
+  .carousel-slide{ 
+    gap: 24px; 
+  }
+  .banner-card:hover{ 
+    transform: scale(1.06); 
+    z-index: 5; 
+  }
+  .carousel-slide .banner-card{ 
+    filter: none; 
+  }
+}
+
+/* Respeita usuários com redução de movimento */
+@media (prefers-reduced-motion: reduce){
+  .transform-frame,
+  .before-image-wrapper,
+  .after-image-wrapper{
+    transition: none !important;
+    animation: none !important;
+  }
+}
+

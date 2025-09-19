@@ -1,0 +1,181 @@
+/* Container fixo no canto direito inferior */
+.produtos-widget {
+  position: fixed;
+  bottom: 20px;
+  right: -200px; /* começa fora da tela */
+  z-index: 9999;
+  text-decoration: none;
+  animation: slideInBox 4s forwards;
+}
+
+.widget-box {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInText 1s 0.8s forwards;
+  transition: background 0.3s ease;
+}
+
+.widget-box:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.produtos-widget:active .widget-box:active {
+  animation: slideInBox 0.5s forwards;
+  right: 1000px;
+  opacity: 1;
+}
+
+.widget-text {
+  font-family: var(--fonte-principal);
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: showText 3s 2s forwards;
+}
+
+/* Animações */
+@keyframes slideInBox {
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showText {
+  to {
+    opacity: 1;
+  }
+}
+
+.produtos-section {
+    background-color: #BF7665;
+    height: 230vh;
+    
+}
+
+.produtos-container-principal {
+    height: 52rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    backdrop-filter: blur(5px);   
+    border-radius: 25px;
+}
+
+.produtos-container {
+  display: block;
+
+}
+
+.goodVit-container {
+  margin-bottom: 2rem;
+}
+.goodVit-container , .elevar-produtos {
+  background: var(--glass-bg);
+  border: var(--glass-border) solid 2px;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  width: 90vw; 
+  height: 90vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.texto-produtos {
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-produtos  {
+    font-family: var(--fonte-titulo);
+    font-size: 3.2rem; 
+    font-style: italic;
+
+
+    color: white;
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+}
+.produtos-title-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;  
+  padding: 0 2rem;
+  font-size: 1rem;
+  color: #fff;
+  margin: -3rem 0 2rem 3rem;
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border 0.3s ease;
+}
+
+
+.img-part {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  
+  
+}
+
+.img-part a {
+  margin: 0;
+  padding: 0;
+}
+
+.img-part img {
+  width: 60%;
+  height: auto;
+  border-radius: 12px;
+  
+}
+
+.img-part img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.elevar-part {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.elevar-part a {
+  margin: 0;
+  padding: 0;
+}
+
+.elevar-part img {
+  width: 60%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.elevar-part img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
