@@ -145,6 +145,36 @@
     </div>
     
     <script>
+
+        const redirects = {
+    "/depilacao-a-laser-feminino": "/",
+    "/gluteos": "/",
+    "/pes-e-dedos-1-sessao": "/",
+    "/tratamentos-corporais": "/",
+    "/preenchimento-facial": "/",
+    "/meia-perna-1-sessao": "/",
+    "/maos-e-dedos-1-sessao": "/",
+    "/microagulhamento-capilar-avulso": "/",
+    "/criofrequencia-avulso": "/",
+    "/ozonioterapia-avulso": "/", 
+    "/criolipolise-fit-avulso": "/",
+    "/mascara-de-led": "/",
+    "/abdome-1-sessao": "/",
+    "/lipocavitacao-avulso": "/",
+    "/radiofrequencia-facial-avulso": "/",
+    "/Estética Facial": "/",
+    "/Serviços Corporais": "/"
+  };
+
+  const path = window.location.pathname.replace(/\/+$/,'').toLowerCase();
+  if (redirects[path]) {
+    // dica: se existir uma âncora da sua home para "corporal"/"facial", use "/#corporal" etc.
+    window.location.replace(redirects[path]);
+  } else {
+    // fallback opcional: manda para a home depois de X segundos
+    setTimeout(() => window.location.replace("/"), 2000);
+  }
+  
         // Redirecionar automaticamente após 10 segundos
         setTimeout(function() {
             window.location.href = '/';
