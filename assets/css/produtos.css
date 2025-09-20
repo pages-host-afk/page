@@ -61,7 +61,7 @@
 }
 
 .produtos-section {
-    background-color: #BF7665;
+    background-color: #e0a294;
     height: 230vh;
     
 }
@@ -83,7 +83,7 @@
 }
 
 .goodVit-container {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .goodVit-container , .elevar-produtos {
   background: var(--glass-bg);
