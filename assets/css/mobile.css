@@ -93,8 +93,14 @@ video::-webkit-media-controls { display:none !important; }
   /* Home section - CORREÇÃO CRÍTICA */
   .home-section {
     height: auto !important;
+    padding: 200px 20px 20px 20px !important;
     min-height: 100vh;
-    padding: 80px 20px 20px 20px !important;
+    background-image: url('/midia/img/bg/bg-mb.png');
+     background-position: 65% center; 
+  }
+
+  main{ 
+    margin-top: -19rem !important;
   }
   
   .home-content {
@@ -113,7 +119,7 @@ video::-webkit-media-controls { display:none !important; }
   .home-title {
     font-size: 2rem !important;
     width: 80vw !important;
-    margin: 0 0 1rem 0 !important;
+    margin: 12rem 0 1rem 0 !important;
     line-height: 1.2 !important;
   }
 
@@ -443,12 +449,16 @@ video::-webkit-media-controls { display:none !important; }
     box-sizing: border-box;
     
   }
-
+  main{
+    margin-top: -18rem !important;
+  }
   /* Home section - CORREÇÃO CRÍTICA */
   .home-section {
     height: auto !important;
     min-height: 100vh;
-    padding: 80px 20px 20px 20px !important;
+    padding: 100px 30px 30px 20px !important;
+    background-image: url('/midia/img/bg/bg-mb.png');
+     background-position: 65% center;
   }
   
   .home-content {
@@ -467,7 +477,7 @@ video::-webkit-media-controls { display:none !important; }
   .home-title {
     font-size: 2.25rem !important;
     width: 80vw !important;
-    margin: 0 0 1rem 0 !important;
+    margin: 17rem 0 1rem 0 !important;
     line-height: 1.2 !important;
     
   }
