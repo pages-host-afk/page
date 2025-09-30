@@ -139,7 +139,7 @@
 }
 .home-section {
   width: 100%;
-  background-image: url('/midia/img/bg/bg-pc.png');
+  background-image: url('/midia/img/bg/bgtop.png');
    background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -708,7 +708,13 @@
   padding: 6rem 2rem;
   display: flex;
   justify-content: center;
+  background-image: url('/midia/img/bg/bgdown.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   
 }
+
 
 /* -------- Conteúdo Sobreposto -------- */
 .cta-content {

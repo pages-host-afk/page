@@ -61,8 +61,12 @@
 }
 
 .produtos-section {
-    background-color: #e0a294;
+   background-image: url('/midia/img/bg/9.png');
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
     height: 230vh;
+
     
 }
 
@@ -102,6 +106,7 @@
   margin-bottom: 2rem;
   align-items: center;
   justify-content: center;
+  
 }
 
 .title-produtos  {
@@ -125,10 +130,15 @@
   margin: -3rem 0 2rem 3rem;
   text-align: center;
   border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
   transition: border 0.3s ease;
 }
-
+.elevar-produtos h3, p {
+  color:white;
+}
+.goodVit-container h3 {
+  color: white;
+}
 
 .img-part {
   position: relative;

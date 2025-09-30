@@ -343,7 +343,9 @@ video::-webkit-media-controls { display:none !important; }
 
   /* Sobre section */
   .sobre-section {
+    margin-top: 23rem;
     padding: 1rem 20px !important;
+    background-image: url('/midia/img/bg/11.png');
   }
   
   .sobre-content {
@@ -368,11 +370,7 @@ video::-webkit-media-controls { display:none !important; }
   }
 
   .team-photo {
-    height: 300px !important;
-    width: 110vw !important;
-    object-fit: fill !important;
-    margin-left: -40px !important;
-    border-radius: 15px !important;
+    display: none;
   }
 
   .depoimentos-subtitle {
@@ -703,6 +701,8 @@ video::-webkit-media-controls { display:none !important; }
   /* Sobre section */
   .sobre-section {
     padding: 1rem 20px !important;
+    margin-top: 23rem;
+    background-image: url('/midia/img/bg/11.png');
   }
   
   .sobre-content {
@@ -729,11 +729,7 @@ video::-webkit-media-controls { display:none !important; }
   }
 
   .team-photo {
-    height: 300px !important;
-    width: 110vw !important;
-    object-fit: fill !important;
-    margin-left: -40px !important;
-    border-radius: 15px !important;
+    display: none;
   }
 
   .depoimentos-subtitle {
